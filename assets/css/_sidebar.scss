@@ -1,0 +1,24 @@
+.sidebar {
+  max-width: 364px;
+  gap: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__search {
+    border-radius: 22px;
+    padding: 8px 16px 8px 56px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: var(--color-tertiary) url('/img/search.svg') no-repeat center left 24px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    padding: 8px 16px;
+    gap: 16px;
+  }
+}
