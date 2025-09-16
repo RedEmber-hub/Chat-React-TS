@@ -16,7 +16,9 @@
   </head>
 
   <body>
-    <main class="main">
+    <!-- scheme -->
+    <!-- scheme-left + scheme-right -->
+    <main id="app">
       <aside class="sidebar">
         <div class="sidebar__actions">
           <button class="button">
@@ -27,7 +29,7 @@
         </div>
 
         <div class="dialog-list">
-          <div class="dialog-item dialog-item--skeleton">
+          <div class="dialog-item dialog-item--skeleton cursor-pointer">
             <div class="dialog-item__avatar">
               <div class="skeleton skeleton--animated"></div>
             </div>
@@ -42,7 +44,7 @@
             </div>
           </div>
 
-          <div class="dialog-item">
+          <div class="dialog-item cursor-pointer">
             <div class="dialog-item__avatar">
               <img src="./img/avatar.jpg" alt="аватар пользователя" />
             </div>
@@ -50,250 +52,28 @@
             <div class="dialog-item__content">
               <div class="dialog-item__header">
                 <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
+                  <div class="dialog__title"><span class="text-main text-main--bold black">Чат 1</span></div>
 
                   <div class="dialog__icon">
                     <img src="./img/verified.svg" alt="галочка верификации" />
                   </div>
                 </div>
 
-                <div class="dialog__time"><time>19:48</time></div>
+                <div class="dialog__time"><time class="caption icon">19:48</time></div>
               </div>
 
               <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
+                <div class="dialog__message"><span class="text icon">Чат был обновлен</span></div>
 
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="dialog-item">
-            <div class="dialog-item__avatar">
-              <img src="./img/avatar.jpg" alt="аватар пользователя" />
-            </div>
-
-            <div class="dialog-item__content">
-              <div class="dialog-item__header">
-                <div class="dialog__title-icon">
-                  <div class="dialog__title"><span>Чат 1</span></div>
-
-                  <div class="dialog__icon">
-                    <img src="./img/verified.svg" alt="галочка верификации" />
-                  </div>
-                </div>
-
-                <div class="dialog__time"><time>19:48</time></div>
-              </div>
-
-              <div class="dialog-item__footer">
-                <div class="dialog__message"><span>Чат был обновлен</span></div>
-
-                <div class="dialog__unread-count"><span>1</span></div>
+                <div class="dialog__unread-count"><span class="caption white">1</span></div>
               </div>
             </div>
           </div>
         </div>
       </aside>
+      <section class="chat">
+        <div class="chat__header"></div>
+      </section>
     </main>
   </body>
 </html>
