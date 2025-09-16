@@ -1,0 +1,83 @@
+.dialog {
+  &-item {
+    padding: 12px 16px;
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    &:hover {
+      background-color: var(--color-tertiary);
+      transition: all var(--transition-speed) var(--transition-function);
+    }
+
+    &__avatar {
+      .skeleton {
+        border-radius: 100px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      width: 100%;
+    }
+
+    &__header,
+    &__footer {
+      .skeleton {
+        min-width: 220px;
+        height: 13px;
+      }
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__unread-count span {
+    border-radius: 100px;
+    width: 18px;
+    height: 18px;
+
+    background: var(--color-success);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title-icon {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+  }
+
+  &__icon {
+    display: flex;
+  }
+
+  &-list {
+    overflow-y: auto;
+
+    // 56px - высота sidebar__actions + 8px gap между sidebar__actions и dialog-list
+    max-height: calc(100% - 64px);
+  }
+}
