@@ -78,6 +78,6 @@
     overflow-y: auto;
 
     // 56px - высота sidebar__actions + 8px gap между sidebar__actions и dialog-list
-    max-height: calc(100% - 64px);
+    height: calc(100% - 64px);
   }
 }
