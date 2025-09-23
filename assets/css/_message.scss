@@ -6,12 +6,10 @@
   display: inline-flex;
   flex-direction: column;
 
-  &--income {
-    background-color: var(--color-primary);
-  }
-
-  &--outcome {
-    background-color: var(--color-success);
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__footer {
@@ -19,5 +17,43 @@
     justify-content: end;
 
     gap: 4px;
+  }
+
+  &--income {
+    background-color: var(--color-primary);
+
+    .message__time time {
+      color: var(--color-black);
+    }
+
+    .message__status {
+      color: var(--color-black);
+
+      // currentColor подставляет заданный цвет (color) (может быть fill или stroke)
+      svg {
+        path {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  &--outcome {
+    background-color: var(--color-success);
+
+    .message__time time {
+      color: var(--color-white);
+    }
+
+    .message__status {
+      color: var(--color-white);
+
+      // currentColor подставляет заданный цвет (color) (может быть fill или stroke)
+      svg {
+        path {
+          fill: currentColor;
+        }
+      }
+    }
   }
 }

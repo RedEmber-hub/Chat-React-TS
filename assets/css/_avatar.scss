@@ -6,6 +6,10 @@
   height: 40px;
   min-height: 40px;
 
+  img {
+    object-fit: cover;
+  }
+
   &--m {
     width: 48px;
     min-width: 48px;

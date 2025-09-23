@@ -32,6 +32,10 @@ video {
   max-width: 100%;
 }
 
+svg {
+  display: flex;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }

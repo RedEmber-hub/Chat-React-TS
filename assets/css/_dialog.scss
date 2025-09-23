@@ -57,6 +57,8 @@
   &-list {
     overflow-y: auto;
 
+    overflow-x: hidden;
+
     // 56px - высота sidebar__actions + 8px gap между sidebar__actions и dialog-list
     height: calc(100% - 64px);
   }

@@ -43,11 +43,11 @@
 
   &__message-list {
     gap: 16px;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
-
-    margin-top: auto;
+    justify-content: flex-end;
   }
 
   &__message-groups {
