@@ -1,137 +1,83 @@
-.chat-header {
-  width: 100%;
-  height: 56px;
-  gap: 8px;
-  padding: 8px 16px 8px 16px;
-
+.chat {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
-  &__main {
+  width: 100%;
+
+  background-color: var(--color-secondary);
+
+  &__header {
+    padding: 8px 16px;
+
     display: flex;
     align-items: center;
 
-    width: 100%;
     gap: 16px;
+
+    background-color: var(--color-primary);
   }
 
-  &__avatar img {
-    width: 40px;
-    height: 40px;
+  &__header-info {
+    width: 100%;
   }
 
-  &__content {
-    max-width: 100%;
-  }
-
-  &__actions {
+  &__header-info-title-subtitle {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+  &__header-actions {
+    display: flex;
 
     gap: 8px;
   }
-}
 
-.chat-window {
-  background-color: var(--color-secondary);
+  &__content {
+    padding: 16px 24px;
 
-  height: calc(100% - 56px);
-  gap: 16px;
+    overflow-y: auto;
+    height: 100%;
+  }
 
-  &__container {
-    padding: 0 45px;
+  &__message-list {
     gap: 16px;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* прижать содержимое вниз */
 
-    height: 100%;
-
-    overflow-y: auto;
+    margin-top: auto;
   }
 
-  &__date-message {
+  &__message-groups {
+    gap: 16px;
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* прижать содержимое вниз */
   }
 
-  &__date {
-    display: inline-flex;
-    align-self: center;
-
-    width: fit-content; // ширина только под содержимое
-    height: 28px;
-
-    border-radius: 12px;
-    padding: 4px 12px;
-    background: rgba(61, 112, 184, 0.6);
+  &__message-group-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__row {
-    width: 100%;
+  &__message-item {
     display: flex;
 
-    &--friend {
+    &--income {
       justify-content: flex-start;
     }
 
-    &--my {
+    &--outcome {
       justify-content: flex-end;
     }
   }
 
-  &__message-time {
-    align-self: flex-end;
-  }
+  &__footer {
+    height: 80px;
 
-  &__emoji-button {
-    width: 24px;
-    height: 24px;
-  }
-
-  &__send-button {
-    width: 24px;
-    height: 24px;
-  }
-
-  &__message {
-    display: inline-flex;
-    flex-direction: column;
-    word-wrap: break-word;
-
-    max-width: 45%;
-    padding: 4px 12px 4px 12px;
-    border-radius: 12px;
-    gap: 4px;
-
-    &--friend {
-      background-color: var(--color-primary);
-    }
-
-    &--my {
-      background-color: var(--color-success);
-    }
-  }
-
-  &__input {
-    background-color: var(--color-primary);
-
-    border-radius: 12px;
-    padding: 16px 16px;
-    height: 56px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-
-  &__message-input {
-    border: none;
-    outline: none; /* убираем фокусную рамку */
-    width: 100%;
+    padding: 0px 24px 24px 24px;
   }
 }

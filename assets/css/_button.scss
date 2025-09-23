@@ -1,4 +1,4 @@
-button {
+.button {
   background-color: transparent;
   border: none;
 
@@ -6,4 +6,9 @@ button {
   height: 40px;
 
   cursor: pointer;
+
+  &--small {
+    width: 24px;
+    height: 24px;
+  }
 }

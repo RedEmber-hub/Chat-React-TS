@@ -14,14 +14,6 @@
       transition: all var(--transition-speed) var(--transition-function);
     }
 
-    &__avatar {
-      .skeleton {
-        border-radius: 100px;
-        width: 48px;
-        height: 48px;
-      }
-    }
-
     &__content {
       display: flex;
       flex-direction: column;
@@ -49,18 +41,6 @@
       justify-content: space-between;
       align-items: center;
     }
-  }
-
-  &__unread-count span {
-    border-radius: 100px;
-    width: 18px;
-    height: 18px;
-
-    background: var(--color-success);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__title-icon {

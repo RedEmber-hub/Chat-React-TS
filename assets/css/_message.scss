@@ -1,0 +1,23 @@
+.message {
+  max-width: 50%;
+  padding: 4px 12px;
+  border-radius: 12px;
+
+  display: inline-flex;
+  flex-direction: column;
+
+  &--income {
+    background-color: var(--color-primary);
+  }
+
+  &--outcome {
+    background-color: var(--color-success);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: end;
+
+    gap: 4px;
+  }
+}
