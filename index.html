@@ -19,18 +19,23 @@
     <!-- scheme -->
     <!-- scheme-left + scheme-right -->
     <main id="app">
-      <aside class="sidebar">
+      <!-- левая часть -->
+      <aside class="sidebar sidebar--minimized">
         <div class="sidebar__actions">
-          <button class="button">
-            <img src="./img/minimize.svg" alt="кнопка для сворачивания диалогов" />
-          </button>
+          <div class="sidebar__minimized-button">
+            <button class="button">
+              <img src="./img/minimize.svg" alt="кнопка для сворачивания диалогов" />
+            </button>
+          </div>
 
-          <input placeholder="Поиск" type="text" class="sidebar__search" />
+          <div class="sidebar__search">
+            <input placeholder="Поиск" type="text" />
+          </div>
         </div>
 
         <div class="dialog-list">
           <div class="dialog-item dialog-item--skeleton cursor-pointer">
-            <div class="dialog-item__avatar">
+            <div class="avatar avatar--m">
               <div class="skeleton skeleton--animated"></div>
             </div>
 
@@ -45,7 +50,7 @@
           </div>
 
           <div class="dialog-item cursor-pointer">
-            <div class="dialog-item__avatar">
+            <div class="avatar avatar--m">
               <img src="./img/avatar.jpg" alt="аватар пользователя" />
             </div>
 
@@ -65,14 +70,172 @@
               <div class="dialog-item__footer">
                 <div class="dialog__message"><span class="text icon">Чат был обновлен</span></div>
 
-                <div class="dialog__unread-count"><span class="caption white">1</span></div>
+                <div class="badge badge--success"><span class="caption white">1</span></div>
               </div>
             </div>
           </div>
         </div>
       </aside>
+
+      <!-- правая часть -->
       <section class="chat">
-        <div class="chat__header"></div>
+        <div class="chat__header">
+          <div class="chat__header-avatar">
+            <!-- аватар компонент -->
+            <div class="avatar">
+              <img src="./img/avatar.jpg" alt="аватар пользователя" />
+            </div>
+          </div>
+
+          <div class="chat__header-info">
+            <div class="chat__header-info-title-subtitle">
+              <!-- название чата -->
+              <span class="text-main text-main--bold black">Чат 1</span>
+
+              <!-- статус -->
+              <span class="text icon">в сети 5 мин назад</span>
+            </div>
+          </div>
+
+          <div class="chat__header-actions">
+            <!-- кнопка поиска -->
+            <button class="button">
+              <img src="./img/search.svg" alt="кнопка поиска" />
+            </button>
+
+            <!-- кнопка вызова -->
+            <button class="button">
+              <img src="./img/call-icon.svg" alt="кнопка вызова" />
+            </button>
+
+            <!-- кнопка настроек -->
+            <button class="button">
+              <img src="./img/more-icon.svg" alt="кнопка настроек" />
+            </button>
+          </div>
+        </div>
+
+        <div class="chat__content">
+          <div class="chat__message-list">
+            <!-- группа сообщений -->
+            <div class="chat__message-groups">
+              <!-- дата сообщений -->
+              <div class="chat__message-group-date">
+                <div class="badge badge--m badge--secondary">
+                  <span class="text-main white">Сегодня</span>
+                </div>
+              </div>
+
+              <div class="chat__message-item chat__message-item--income">
+                <!-- компонент сообщения друга -->
+                <div class="message message--income">
+                  <div class="message__attachment">
+                    <span class="text-main">Привет! Ты сделал домашку по верстке?</span>
+                  </div>
+
+                  <div class="message__footer">
+                    <div class="message__time">
+                      <time class="caption">18:12</time>
+                    </div>
+
+                    <div class="message__status">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.95834 9.67517L2.74575 7.46258C2.63574 7.35632 2.48838 7.29753 2.33544 7.29886C2.18249 7.30019 2.03618 7.36153 1.92803 7.46969C1.81987 7.57784 1.75852 7.72415 1.75719 7.8771C1.75586 8.03005 1.81466 8.1774 1.92092 8.28742L4.54592 10.9124C4.65531 11.0218 4.80366 11.0832 4.95834 11.0832C5.11302 11.0832 5.26136 11.0218 5.37075 10.9124L11.7874 4.49575C11.8937 4.38573 11.9525 4.23838 11.9511 4.08543C11.9498 3.93248 11.8885 3.78618 11.7803 3.67802C11.6722 3.56987 11.5259 3.50852 11.3729 3.50719C11.22 3.50586 11.0726 3.56466 10.9626 3.67092L4.95834 9.67517Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat__message-item chat__message-item--outcome">
+                <!-- Компонент моего сообщения -->
+                <div class="message message--outcome">
+                  <!-- attachment = вложение (текст, картинка, видео, аудио) -->
+                  <div class="message__attachment">
+                    <span class="text-main">Ага, но теперь верстаю сам мессенджер</span>
+                  </div>
+
+                  <div class="message__footer">
+                    <!-- time = время отправки -->
+                    <div class="message__time">
+                      <time class="caption">18:12</time>
+                    </div>
+
+                    <!-- status = иконка статуса сообщения -->
+                    <div class="message__status">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.95834 9.67517L2.74575 7.46258C2.63574 7.35632 2.48838 7.29753 2.33544 7.29886C2.18249 7.30019 2.03618 7.36153 1.92803 7.46969C1.81987 7.57784 1.75852 7.72415 1.75719 7.8771C1.75586 8.03005 1.81466 8.1774 1.92092 8.28742L4.54592 10.9124C4.65531 11.0218 4.80366 11.0832 4.95834 11.0832C5.11302 11.0832 5.26136 11.0218 5.37075 10.9124L11.7874 4.49575C11.8937 4.38573 11.9525 4.23838 11.9511 4.08543C11.9498 3.93248 11.8885 3.78618 11.7803 3.67802C11.6722 3.56987 11.5259 3.50852 11.3729 3.50719C11.22 3.50586 11.0726 3.56466 10.9626 3.67092L4.95834 9.67517Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat__message-item chat__message-item--income">
+                <!-- компонент сообщения друга -->
+                <div class="message message--income">
+                  <div class="message__attachment">
+                    <span class="text-main black">Привет! Ты сделал домашку по верстке?</span>
+                  </div>
+
+                  <div class="message__footer">
+                    <div class="message__time">
+                      <time class="caption black">18:12</time>
+                    </div>
+
+                    <div class="message__status">
+                      <img src="./img/check-icon.svg" alt="Статус доставлено" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat__message-item chat__message-item--income">
+                <!-- компонент сообщения друга -->
+                <div class="message message--income">
+                  <div class="message__attachment">
+                    <span class="text-main black">Привет! Ты сделал домашку по верстке?</span>
+                  </div>
+
+                  <div class="message__footer">
+                    <div class="message_time">
+                      <time class="caption black">18:12</time>
+                    </div>
+
+                    <div class="message__status">
+                      <img src="./img/check-icon.svg" alt="Статус доставлено" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat__footer">
+          <!-- компонент для ввода и отправки сообщения со смайликами -->
+          <div class="sender">
+            <!-- контейнер с компонентом "кнопка со смайликами" -->
+            <div class="sender__icon-button">
+              <button class="button button--s" type="button">
+                <img src="./img/emoji-icon.svg" alt="Смайлики" />
+              </button>
+            </div>
+
+            <input type="text" class="sender__message-input text-main icon" placeholder="Напишите сообщение" />
+
+            <!-- контейнер с компонентом "кнопка отправки сообщения" -->
+            <div class="sender__send-button">
+              <button class="button button--s" type="button">
+                <img src="./img/send-icon.svg" alt="Смайлики" />
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>

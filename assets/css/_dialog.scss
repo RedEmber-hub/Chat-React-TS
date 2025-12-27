@@ -14,14 +14,6 @@
       transition: all var(--transition-speed) var(--transition-function);
     }
 
-    &__avatar {
-      .skeleton {
-        border-radius: 100px;
-        width: 48px;
-        height: 48px;
-      }
-    }
-
     &__content {
       display: flex;
       flex-direction: column;
@@ -51,18 +43,6 @@
     }
   }
 
-  &__unread-count span {
-    border-radius: 100px;
-    width: 18px;
-    height: 18px;
-
-    background: var(--color-success);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   &__title-icon {
     display: flex;
     align-items: center;
@@ -77,7 +57,9 @@
   &-list {
     overflow-y: auto;
 
+    overflow-x: hidden;
+
     // 56px - высота sidebar__actions + 8px gap между sidebar__actions и dialog-list
-    max-height: calc(100% - 64px);
+    height: calc(100% - 64px);
   }
 }
